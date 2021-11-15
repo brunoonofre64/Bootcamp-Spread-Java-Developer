@@ -37,7 +37,7 @@ public class condicionaisSwitch {
 			diaSemanaNome = "Sabádo";
 			break;
 		default: 
-			diaSemanaNome = "Número inválido";
+			diaSemanaNome = "Um Número inválido";
 		} 
 		
 		System.out.println("Você escolheu " + diaSemanaNome);
