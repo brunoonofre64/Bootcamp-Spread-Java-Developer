@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Exercicio3 {
 //	
-//    Fa√ßa um programa que leia e valide as seguintes informa√ß√µes:
+//  FaÁa um programa que leia e valide as seguintes informaÁıes:
 //	Nome: maior que 3 caracteres;
 //	Idade: entre 0 e 150;
-//	Sal√°rio: maior que zero;
+//	Sal·rio: maior que zero;
 //	Sexo: 'f' ou 'm';
 //	Estado Civil: 's', 'c', 'v', 'd';
 	
@@ -25,7 +25,7 @@ public class Exercicio3 {
 		nome = scan.next();
 		
 		while(nome.length() < 3) {
-			System.out.println("Min√≠mo de letras aceitas = 3");
+			System.out.println("Minimmo de letras aceitas = 3");
 			nome = scan.next();
 		}
 		
@@ -34,7 +34,7 @@ public class Exercicio3 {
 		idade = scan.nextInt();
 		
 		while(idade < 0 || idade > 150) {
-			System.out.println("Idade inv√°lida, digite novamente:");
+			System.out.println("Idade invalida, digite novamente:");
 			idade = scan.nextInt();
 		}
 		
@@ -51,12 +51,12 @@ public class Exercicio3 {
 		
 		while(sexo != 'F' && sexo != 'M') {
 			
-			System.out.println("Sexo inv√°lido digite novamente.");
+			System.out.println("Sexo invalido digite novamente.");
 			sexo = scan.next().charAt(0);
 		}
 		
 		
-		System.out.println("Digite a inicial do seu estado c√≠vil ('s', 'c', 'v', 'd')");
+		System.out.println("Digite a inicial do seu estado civil ('s', 'c', 'v', 'd')");
 		estadoCivil = scan.next().charAt(0);
 		
 		// condicional para ignorar o case.
@@ -74,7 +74,7 @@ public class Exercicio3 {
 		while(estadoCivil != 'S' && estadoCivil != 'C' 
 				&& estadoCivil != 'V' && estadoCivil != 'D') {
 			
-			System.out.println("Letra inv√°lida, digite novamente:");
+			System.out.println("Letra invalida, digite novamente:");
 			estadoCivil = scan.next().charAt(0);
 		} 
 		
@@ -91,7 +91,7 @@ public class Exercicio3 {
 		
 		
 		System.out.println(nome + " tem " + idade + " anos e de" + " sexo " + sexo
-				+ " atualmente √© um cidad√£o(a) " + estadoCivilString);
+				+ " atualmente È um cidad„o(a) " + estadoCivilString);
 		
 		scan.close();
 		
