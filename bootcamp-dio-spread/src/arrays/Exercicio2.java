@@ -13,14 +13,13 @@ public class Exercicio2 {
 		Random random = new Random();		
 		
 		int[] nums = new int[20];
+		
 			
 		for(int i = 0; i < (nums.length -1); i++) {
              System.out.println(nums[i] = random.nextInt(100)); 		
              System.out.println("Sucessor -> " + (nums[i] + 1));
   }
-		
 
-		
 		
 		
 		
