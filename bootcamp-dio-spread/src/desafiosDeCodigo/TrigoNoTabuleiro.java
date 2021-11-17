@@ -19,7 +19,7 @@ import java.util.Scanner;
 //uma grama. Finalmente, o cálculo da quantidade deverá caber em um valor
 //inteiro de 64 bits sem sinal.
 
-public class Desafio2 {
+public class TrigoNoTabuleiro {
 	
 	 public static void main(String[] args) {
 	        Scanner scan = new Scanner(System.in);
