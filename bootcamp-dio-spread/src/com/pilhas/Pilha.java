@@ -41,5 +41,25 @@ public class Pilha {
 	// ou usar o ternário no lugar o if ex: 
 	// return refeNoEntradaPilha == null? true : false;
 	
+	@Override
+	public String toString() {
+		String stringRetorno = "--------------\n";
+		stringRetorno += "       Pilha\n";
+		stringRetorno += "--------------\n";
+		
+		No noAuxiliar = refeNoEntradaPilha;
+		
+		while(true) {
+			if(noAuxiliar != null) {
+				stringRetorno += "[No{dado=" + noAuxiliar.getDado() + "}]\n";
+				noAuxiliar = noAuxiliar.getRefeNo();
+			} else {
+				break;
+			}
+		}
+		stringRetorno += "================\n";
+		return stringRetorno;
+	}
+	
 
 }
