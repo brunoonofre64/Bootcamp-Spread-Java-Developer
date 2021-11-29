@@ -1,9 +1,9 @@
 package com.filas;
 
-public class No { 
+public class No<T> { 
 	
-	private Object object;
-	private No refeNo;
+	private T object;
+	private No<T> refeNo;
 	
 	
 	public No() {
@@ -15,22 +15,22 @@ public class No {
 	}
 
 
-	public void setObject(Object object) {
+	public void setObject(T object) {
 		this.object = object;
 	}
 
 
-	public No getRefeNo() {
+	public No<T> getRefeNo() {
 		return refeNo;
 	}
 
 
-	public void setRefeNo(No refeNo) {
+	public void setRefeNo(No<T> refeNo) {
 		this.refeNo = refeNo;
 	}
 
 
-	public No(Object object) {
+	public No(T object) {
 		this.refeNo = null;
 		this.object = object;
 	}
