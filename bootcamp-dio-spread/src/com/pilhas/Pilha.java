@@ -9,37 +9,30 @@ public class Pilha {
 	}
 	
 	
+	public void push(No novoNo) {
+		No referenciaAuxiliar = referenciaNoEntradaPilha;
+		this.referenciaNoEntradaPilha = novoNo;
+		novoNo.setRefeNo(referenciaAuxiliar);
+	}
 	
-    public void push(No novoNo) {
-    	No referenciaAuxiliar = referenciaNoEntradaPilha;
-    	this.referenciaNoEntradaPilha = novoNo;
-    	novoNo.setRefeNo(referenciaAuxiliar);
-    }
-    
-    
-    public No pop() {
-    	if(!this.isEmpty()) {
-    		No noPoped = referenciaNoEntradaPilha;
-    		referenciaNoEntradaPilha = referenciaNoEntradaPilha.getRefeNo();
-    		return noPoped;
-    	}
-    	return null;
-    }
-    
+	public boolean isEmpty() {
+		return referenciaNoEntradaPilha == null ? true : false;
+	}
+	
+	
+	public No pop() {
+		if(this.isEmpty()) {
+			No noPoped = referenciaNoEntradaPilha;
+			referenciaNoEntradaPilha = referenciaNoEntradaPilha.getRefeNo();
+			return noPoped;
+		}
+		return null;
+	}
 	
 	public No top() {
 		return referenciaNoEntradaPilha;
 	}
 	
-	
-	public boolean isEmpty() { 
-		if(referenciaNoEntradaPilha == null) {
-			return true;
-		}
-		return false;
-	}
-	// ou usar o ternário no lugar o if ex: 
-	// return refeNoEntradaPilha == null? true : false;
 	
 	@Override
 	public String toString() {
