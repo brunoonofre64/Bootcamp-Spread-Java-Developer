@@ -2,25 +2,25 @@ package com.pilhas;
 
 public class Pilha {
 	
-	private No refeNoEntradaPilha;
+	private No referenciaNoEntradaPilha;
 	
 	public Pilha() {
-		this.refeNoEntradaPilha = null;
+		this.referenciaNoEntradaPilha = null;
 	}
 	
 	
 	
     public void push(No novoNo) {
-    	No refeAuxiliar = refeNoEntradaPilha;
-    	this.refeNoEntradaPilha = novoNo;
-    	novoNo.setRefeNo(refeAuxiliar);
+    	No referenciaAuxiliar = referenciaNoEntradaPilha;
+    	this.referenciaNoEntradaPilha = novoNo;
+    	novoNo.setRefeNo(referenciaAuxiliar);
     }
     
     
     public No pop() {
     	if(!this.isEmpty()) {
-    		No noPoped = refeNoEntradaPilha;
-    		refeNoEntradaPilha = refeNoEntradaPilha.getRefeNo();
+    		No noPoped = referenciaNoEntradaPilha;
+    		referenciaNoEntradaPilha = referenciaNoEntradaPilha.getRefeNo();
     		return noPoped;
     	}
     	return null;
@@ -28,12 +28,12 @@ public class Pilha {
     
 	
 	public No top() {
-		return refeNoEntradaPilha;
+		return referenciaNoEntradaPilha;
 	}
 	
 	
 	public boolean isEmpty() { 
-		if(refeNoEntradaPilha == null) {
+		if(referenciaNoEntradaPilha == null) {
 			return true;
 		}
 		return false;
@@ -47,7 +47,7 @@ public class Pilha {
 		stringRetorno += "       Pilha\n";
 		stringRetorno += "--------------\n";
 		
-		No noAuxiliar = refeNoEntradaPilha;
+		No noAuxiliar = referenciaNoEntradaPilha;
 		
 		while(true) {
 			if(noAuxiliar != null) {
