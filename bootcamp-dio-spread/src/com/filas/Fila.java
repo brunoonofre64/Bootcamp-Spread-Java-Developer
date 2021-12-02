@@ -3,30 +3,33 @@ package com.filas;
 public class Fila<T> { 
 	
 	private No<T> refeNoEntradaFila;
-
+	
 	public Fila() {
 		this.refeNoEntradaFila = null;
 	}
 	
+	public boolean isEmpty() {
+		return refeNoEntradaFila == null ? true : false;
+	}
+	
 	
 	public void enqueue(T object) {
-		No<T> novoNo = new No<>(object);
+		No<T> novoNo = new No(object);
 		novoNo.setRefeNo(refeNoEntradaFila);
-		refeNoEntradaFila = novoNo;
+		this.refeNoEntradaFila = novoNo;
 	}
 	
 	
 	public T first() {
 		if(!this.isEmpty()) {
-			No<T> primeiroNo = refeNoEntradaFila;
-			while(true) {
-				if(primeiroNo.getRefeNo() != null){
-				  primeiroNo = primeiroNo.getRefeNo();	
-				}else {
-					break;
-				}
-			}
-			return (T) primeiroNo.getObject();
+		  No<T> primeiroNo = refeNoEntradaFila;
+		    while(true) {
+		    	if(primeiroNo.getRefeNo() != null) {
+		    		primeiroNo = primeiroNo.getRefeNo();
+		    	}
+		    	break;
+		    }
+		    return (T) primeiroNo.getObject();
 		}
 		return null;
 	}
@@ -34,25 +37,20 @@ public class Fila<T> {
 	
 	public T dequeue() {
 		if(!this.isEmpty()) {
-			No<T> primeiroNo = refeNoEntradaFila;
+			No<T> primeiNo = refeNoEntradaFila;
 			No<T> noAuxiliar = refeNoEntradaFila;
-			while(true) {
-				if(primeiroNo.getRefeNo() != null){
-					noAuxiliar = primeiroNo;
-					primeiroNo = primeiroNo.getRefeNo();	
-				}else {
-					noAuxiliar.setRefeNo(null);
-					break;
-				}
-			}
-			return (T)primeiroNo.getObject();
+			  while(true) {
+				  if(primeiNo.getRefeNo() != null) {
+					  noAuxiliar = primeiNo;
+					  primeiNo = primeiNo.getRefeNo();
+				  } else {
+					  noAuxiliar.setRefeNo(null);
+					  break;
+				  }
+			  }
+			  return (T) primeiNo.getObject();
 		}
 		return null;
-	}
-	
-	
-	public boolean isEmpty() {
-		return refeNoEntradaFila == null ? true : false;
 	}
 
 
@@ -78,9 +76,5 @@ public class Fila<T> {
 		}
 		return stringRetorno;
 	} 
-	
-	
-	
-	
 
 }

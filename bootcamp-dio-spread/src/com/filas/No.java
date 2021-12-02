@@ -10,6 +10,12 @@ public class No<T> {
 	}
 	
 	
+	public No(T object) {
+		this.refeNo = null;
+		this.object = object;
+	}
+	
+	
 	public Object getObject() {
 		return object;
 	}
@@ -28,13 +34,7 @@ public class No<T> {
 	public void setRefeNo(No<T> refeNo) {
 		this.refeNo = refeNo;
 	}
-
-
-	public No(T object) {
-		this.refeNo = null;
-		this.object = object;
-	}
-
+	
 
 	@Override
 	public String toString() {
