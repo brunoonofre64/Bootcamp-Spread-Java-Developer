@@ -55,7 +55,7 @@ public class No<T> {
 		if(proximoNo != null) {
 			str += " -> " +  proximoNo.toString();
 		} else {
-			str += "->null";
+			str += "->null"
 		}
 		return str;
 	}
