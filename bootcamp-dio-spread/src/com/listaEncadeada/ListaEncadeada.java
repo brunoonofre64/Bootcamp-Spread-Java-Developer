@@ -49,7 +49,7 @@ public class ListaEncadeada<T> {
 		noAnterior.setProximoNo(noPivor.getProximoNo());
 		return noPivor.getConteudo();
 	}
-	
+	git s
 	
 
 	public ListaEncadeada() {
