@@ -49,7 +49,7 @@ public class ListaEncadeada<T> {
 		noAnterior.setProximoNo(noPivor.getProximoNo());
 		return noPivor.getConteudo();
 	}
-	git s
+	
 	
 
 	public ListaEncadeada() {
@@ -91,6 +91,23 @@ public class ListaEncadeada<T> {
 					" desta lista. Pois ela só vai até o indice " + ultimoIndice);
 		}
 	}
+
+
+
+	@Override
+	public String toString() {
+		String strRetorno= "";
+		No<T> noAuxiliar = referenciaEntrada;
+		for(int i = 0; i < this.size(); i++) {
+			strRetorno += "[No {conteudo=" 
+		+ noAuxiliar.getConteudo() + "}]";
+			noAuxiliar = noAuxiliar.getProximoNo();
+		}
+		strRetorno += "null";
+		
+		return strRetorno;
+	}
+	
 	
 	
 
