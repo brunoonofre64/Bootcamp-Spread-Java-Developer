@@ -102,13 +102,13 @@ public class ListaDuplamenteEncadeada<T> {
 	@Override
 	public String toString() {
 		String strRetorno = "";
-		NoDuplo<T> noAuxiDuplo = primeiroNo;
+		NoDuplo<T> noAuxiliar = primeiroNo;
 		for(int i = 0; i < size(); i++) {
-			strRetorno += "[No{conteudo=" + noAuxiDuplo.getConteudo() +
+			strRetorno += "[No{conteudo=" + noAuxiliar.getConteudo() +
 					" }] ---> ";
-			noAuxiDuplo = noAuxiDuplo.getNoProximo();
+			noAuxiliar = noAuxiliar.getNoProximo();
 		}
-		strRetorno = "null";
+		strRetorno += "null";
 		return strRetorno;
 	}
 	
